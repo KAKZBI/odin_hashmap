@@ -1,11 +1,5 @@
-class Node
-    attr_accessor :key, :value, :next_node
-    def initialize(key = nil, value = nil, next_node = nil)
-        @key = key
-        @value = value
-        @next_node = next_node
-    end
-end
+require_relative './node.rb'
+
 class LinkedList
     attr_accessor :head_node
     def initialize(head_node = nil)
