@@ -50,10 +50,10 @@ class LinkedList
     end
 
     def at(index)
-        return nil unless index < self.size
+        return nil if index >= self.size || index < 0
         current_node = self.head_node
         current_index = 0
-        while current_index < index -1 
+        while current_index < index  
             current_node = current_node.next_node
             current_index += 1
         end
@@ -145,21 +145,3 @@ class LinkedList
     end
 end
 
-# node_1 = Node.new(1, "once")
-# node_2 = Node.new(2, "upon")
-# node_3 = Node.new(3, "a")
-# node_4 = Node.new(4, "time")
-# node_1.next_node = node_2
-# node_2.next_node = node_3
-# node_3.next_node = node_4
-
-# list = LinkedList.new(node_1)
-
-# puts list
-
-# list.insert_at(5, "I think", 2)
-
-# puts list
-
-# list.remove_at(4)
-# puts list
